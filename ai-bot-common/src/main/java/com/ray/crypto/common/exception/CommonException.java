@@ -4,24 +4,27 @@ import com.ray.crypto.common.constants.ResultCode;
 import lombok.Getter;
 
 /**
- * 异常
+ * 通用异常
+ * 
+ * @author ray
+ * @date 2024-11-13
  */
 @Getter
-public class GenericException extends Exception {
+public class CommonException extends Exception {
 
     private final ResultCode code;
 
-    public GenericException(ResultCode code) {
+    public CommonException(ResultCode code) {
         super(code.getMessage());
         this.code = code;
     }
 
-    public GenericException(ResultCode code, String message) {
+    public CommonException(ResultCode code, String message) {
         super(message);
         this.code = code;
     }
 
-    public GenericException(String message) {
+    public CommonException(String message) {
         super(message);
         this.code = ResultCode.SYSTEM_ERROR;
     }

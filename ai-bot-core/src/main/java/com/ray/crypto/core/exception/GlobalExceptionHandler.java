@@ -2,7 +2,7 @@ package com.ray.crypto.core.exception;
 
 
 import com.ray.crypto.common.constants.ResultCode;
-import com.ray.crypto.common.exception.GenericException;
+import com.ray.crypto.common.exception.CommonException;
 import com.ray.crypto.common.mudules.result.Result;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(GenericException.class)
-    public Result<Void> genericExceptionHandler(GenericException exception){
+    @ExceptionHandler(CommonException.class)
+    public Result<Void> genericExceptionHandler(CommonException exception){
         return Result.fail(exception.getCode(),exception.getMessage());
     }
 
