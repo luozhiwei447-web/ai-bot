@@ -20,6 +20,9 @@
         <module>ai-bot-common</module>
         <module>ai-bot-core</module>
         <module>ai-bot-start</module>
+        <module>api-bot-open-router</module>
+        <module>api-bot-taapi</module>
+        <module>api-bot-service</module>
     </modules>
 
 	<properties>
@@ -61,6 +64,21 @@
 			<dependency>
 				<groupId>com.ray</groupId>
 				<artifactId>ai-bot-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ray</groupId>
+				<artifactId>api-bot-open-router</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ray</groupId>
+				<artifactId>api-bot-taapi</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ray</groupId>
+				<artifactId>api-bot-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
